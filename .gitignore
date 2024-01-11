@@ -1,0 +1,27 @@
+# General application docs 
+*.docx
+*.pptx
+*.tmp
+
+# Python specific files to ignore 
+*.ipynb_checkpoints
+__pycache__
+
+# Ignore old folders
+old
+Week 1
+Week 2
+Week 3
+Week 4
+Week 5
+Week 6
+Week 7
+Week 8
+Week 9
+Week 10
+Week 11
+Week 12
+Week 13
+Week 14
+
+
