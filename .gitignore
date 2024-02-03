@@ -6,6 +6,7 @@
 # Python specific files to ignore 
 *.ipynb_checkpoints
 __pycache__
+*.python export
 *.RHistory
 
 # Ignore old folders
@@ -13,7 +14,7 @@ old
 # Week 1
 # Week 2
 # Week 3
-Week 4
+# Week 4
 Week 5
 Week 6
 Week 7
