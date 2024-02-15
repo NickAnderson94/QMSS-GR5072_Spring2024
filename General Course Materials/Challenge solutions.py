@@ -58,3 +58,18 @@ X
 #Step 2
 beta_hat = np.linalg.inv(X.T.dot(X)).dot(X.T).dot(Y)
 beta_hat
+
+
+##  Week 5 ===================================
+
+# Fix function to accept np.inf values
+def rescale01(x):
+    x = x.replace(np.inf, np.nan)
+    min_ = x.min()  
+    max_ = x.max()
+    return ( x - min_ ) / ( max_ - min_ )
+rescale01(x)
+
+
+
+
