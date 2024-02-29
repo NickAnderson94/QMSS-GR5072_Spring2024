@@ -131,3 +131,42 @@ for col in iris.columns:
         means.append(m)              # Append mean
 means       
 
+
+###  Week 7 ===================================
+
+import re
+
+# regex challenge 1:
+string = '39801 356, 2102 1111'
+pattern = '\d{3} \d{2}'
+
+# match variable contains a Match object.
+match = re.search(pattern, string) 
+print(match)
+   
+
+# regex challenge 2:
+string = "Python is fun"
+
+# check if 'Python' is at the beginning
+match = re.match('Python', string)
+print(match)
+
+ 
+# regex challenge 3:   
+# Match strings starting with "The"
+regex = 'The'
+strings = ['The quick brown fox', 'The lazy dog', 'A quick brown fox']
+for string in strings:
+    if re.match(regex, string):
+        print(f'Matched: {string}')
+    else:
+        print(f'Not matched: {string}')    
+  
+    
+# regex challenge 4:
+string0 = ["I went to him at 11 A.M. on 4th July 1886", "She went to him at 10 A.M. on 4th July 1890"]
+for string in string0:
+    print(re.findall("\d{4}", string))
+
+
