@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Mar  2 07:35:25 2024
-
-@author: nicho
-"""
-
 
 # Set directory
 import os
