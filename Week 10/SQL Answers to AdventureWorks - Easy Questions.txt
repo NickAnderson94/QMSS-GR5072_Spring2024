@@ -1,0 +1,65 @@
+##### Make a freq table in SQL ####
+SELECT CompanyName, COUNT(CompanyName)
+  FROM Customer
+  GROUP BY CompanyName;
+
+SELECT OrderQty, COUNT(OrderQty)
+  FROM SalesOrderDetail
+  GROUP BY OrderQty;
+
+################################ Easy Questions #################################
+# Q1
+SELECT FirstName, EmailAddress 
+   FROM Customer 
+   WHERE CompanyName = 'Bike World';
+
+# Q2
+SELECT CompanyName, City, AddressType
+   FROM Customer 
+   LEFT JOIN CustomerAddress ON 
+   Customer.CustomerID = CustomerAddress.CustomerID 
+   LEFT JOIN Address ON 
+   CustomerAddress.AddressID=Address.AddressID
+   WHERE City = "Dallas";
+
+# Q3
+SELECT COUNT(ListPrice)
+   FROM SalesOrderDetail
+   LEFT JOIN Product ON
+   SalesOrderDetail.ProductID = Product.ProductID
+   WHERE ListPrice > 1000;
+
+# Q4
+SELECT CompanyName, SubTotal, TaxAmt, Freight, SubTotal + TaxAmt + Freight as Total
+   FROM SalesOrderHeader
+   LEFT JOIN Customer ON 
+   SalesOrderHeader.CustomerID = Customer.CustomerID 
+   WHERE SubTotal + TaxAmt + Freight > 100000;
+
+# Q5
+SELECT CompanyName, COUNT(CompanyName) as n
+   FROM Customer
+   WHERE CompanyName = 'Riding Cycles';
+
+SELECT Name
+   FROM Product
+   WHERE name='Racing Socks, L'
+  ;
+
+SELECT CompanyName, OrderQty, Name
+   FROM Customer 
+   RIGHT JOIN SalesOrderHeader ON
+   Customer.CustomerID = SalesOrderHeader.CustomerID
+   RIGHT JOIN SalesOrderDetail ON
+   SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
+   LEFT JOIN Product ON
+   SalesOrderDetail.ProductID = Product.ProductID
+   WHERE CompanyName = 'Riding Cycles' and Name = 'Racing Socks, L';
+
+
+
+
+
+
+
+
