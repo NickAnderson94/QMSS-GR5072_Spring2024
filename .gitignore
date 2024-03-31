@@ -8,6 +8,7 @@
 __pycache__
 python export.csv
 *.RHistory
+*.cache
 
 # Ignore old folders
 old
